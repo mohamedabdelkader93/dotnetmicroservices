@@ -9,7 +9,9 @@ namespace Mango.Web.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
-        public ProductController(IProductService productService)
+        private readonly ICategoryService _categoryService;
+
+        public ProductController(IProductService productService, ICategoryService _categoryService)
         {
             _productService=productService;
         }

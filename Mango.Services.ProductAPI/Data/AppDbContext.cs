@@ -10,6 +10,8 @@ namespace Mango.Services.ProductAPI.Data
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -50,6 +52,22 @@ namespace Mango.Services.ProductAPI.Data
                 Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                 ImageUrl = "https://placehold.co/600x400",
                 CategoryName = "Entree"
+            });
+            // category migration
+            modelBuilder.Entity<Category>().HasData(new Category
+            {
+                CategoryId = 1,
+                Name = "cat 0",
+                Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
+                ImageUrl = "https://placehold.co/603x403",
+            });
+
+            modelBuilder.Entity<Category>().HasData(new Category
+            {
+                CategoryId = 2,
+                Name = "cat 1",
+                Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
+                ImageUrl = "https://placehold.co/603x403",
             });
         }
     }
