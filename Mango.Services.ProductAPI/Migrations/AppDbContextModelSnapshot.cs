@@ -72,7 +72,7 @@ namespace Mango.Services.ProductAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"));
 
-                    b.Property<string>("CategoryId")
+                    b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -101,7 +101,7 @@ namespace Mango.Services.ProductAPI.Migrations
                         new
                         {
                             ProductId = 1,
-                            CategoryId = "Appetizer",
+                            CategoryName = "Appetizer",
                             Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                             ImageUrl = "https://placehold.co/603x403",
                             Name = "Samosa",
@@ -110,7 +110,7 @@ namespace Mango.Services.ProductAPI.Migrations
                         new
                         {
                             ProductId = 2,
-                            CategoryId = "Appetizer",
+                            CategoryName = "Appetizer",
                             Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                             ImageUrl = "https://placehold.co/602x402",
                             Name = "Paneer Tikka",
@@ -119,7 +119,7 @@ namespace Mango.Services.ProductAPI.Migrations
                         new
                         {
                             ProductId = 3,
-                            CategoryId = "Dessert",
+                            CategoryName = "Dessert",
                             Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                             ImageUrl = "https://placehold.co/601x401",
                             Name = "Sweet Pie",
@@ -128,7 +128,7 @@ namespace Mango.Services.ProductAPI.Migrations
                         new
                         {
                             ProductId = 4,
-                            CategoryId = "Entree",
+                            CategoryName = "Entree",
                             Description = " Quisque vel lacus ac magna, vehicula sagittis ut non lacus.<br/> Vestibulum arcu turpis, maximus malesuada neque. Phasellus commodo cursus pretium.",
                             ImageUrl = "https://placehold.co/600x400",
                             Name = "Pav Bhaji",
