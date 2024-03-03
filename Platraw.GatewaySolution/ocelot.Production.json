@@ -8,7 +8,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesproductapi.azurewebsites.net"
+          "Host": "platrawservicesproductapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/product",
@@ -19,7 +19,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesproductapi.azurewebsites.net"
+          "Host": "platrawservicesproductapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/product/{id}",
@@ -33,7 +33,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesproductapi.azurewebsites.net"
+          "Host": "platrawservicesproductapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/product",
@@ -49,7 +49,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescouponapi.azurewebsites.net"
+          "Host": "platrawservicescouponapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/coupon",
@@ -60,7 +60,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescouponapi.azurewebsites.net"
+          "Host": "platrawservicescouponapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/coupon/GetByCode/{code}",
@@ -71,7 +71,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescouponapi.azurewebsites.net"
+          "Host": "platrawservicescouponapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/coupon/{id}",
@@ -85,7 +85,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescouponapi.azurewebsites.net"
+          "Host": "platrawservicescouponapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/coupon",
@@ -101,7 +101,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescartapi.azurewebsites.net"
+          "Host": "platrawservicescartapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/cart/GetCart/{id}",
@@ -115,7 +115,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescartapi.azurewebsites.net"
+          "Host": "platrawservicescartapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/cart/RemoveCart",
@@ -129,7 +129,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescartapi.azurewebsites.net"
+          "Host": "platrawservicescartapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/cart/CartUpsert",
@@ -143,7 +143,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescartapi.azurewebsites.net"
+          "Host": "platrawservicescartapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/cart/EmailCartRequest",
@@ -157,7 +157,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicescartapi.azurewebsites.net"
+          "Host": "platrawservicescartapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/cart/ApplyCoupon",
@@ -173,7 +173,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesordersapi.azurewebsites.net"
+          "Host": "platrawservicesordersapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/order/GetOrders/{id}",
@@ -187,7 +187,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesordersapi.azurewebsites.net"
+          "Host": "platrawservicesordersapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/order/GetOrders/",
@@ -201,7 +201,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesordersapi.azurewebsites.net"
+          "Host": "platrawservicesordersapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/order/GetOrder/{id}",
@@ -215,7 +215,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesordersapi.azurewebsites.net"
+          "Host": "platrawservicesordersapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/order/UpdateOrderStatus/{id}",
@@ -229,7 +229,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesordersapi.azurewebsites.net"
+          "Host": "platrawservicesordersapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/order/ValidateStripeSession",
@@ -243,7 +243,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesordersapi.azurewebsites.net"
+          "Host": "platrawservicesordersapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/order/CreateStripeSession",
@@ -257,7 +257,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "mangoservicesordersapi.azurewebsites.net"
+          "Host": "platrawservicesordersapi.azurewebsites.net"
         }
       ],
       "UpstreamPathTemplate": "/api/order/CreateOrder",
@@ -268,6 +268,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://mangogateway.azurewebsites.net"
+    "BaseUrl": "https://platrawgateway.azurewebsites.net"
   }
 }
