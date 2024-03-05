@@ -10,7 +10,9 @@ const SignInView = () => {
     axios.post('https://localhost:7002/api/auth/login', values)
       .then(response => {
         console.log("response", response);
-        localStorage.setItem("profile", JSON.stringify(response.data.result));
+        if(response && response.data && response.data.result){
+          localStorage.setItem("profile", JSON.stringify(response.data.result));
+        }
       })
       .catch(error => {
         console.error(error);

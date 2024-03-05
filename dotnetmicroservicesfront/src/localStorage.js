@@ -34,8 +34,10 @@ export const loadState = () => {
   
   export const saveProfileState = (state) => {
     try {
+      if(state.token){
       const serializedState = JSON.stringify(state);
       localStorage.setItem("profile", serializedState);
+      }
     } catch {
       // ignore write errors
     }

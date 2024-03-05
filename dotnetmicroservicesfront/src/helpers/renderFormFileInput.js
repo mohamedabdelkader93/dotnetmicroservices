@@ -15,8 +15,8 @@ const handleChange = (event, input, onImageChange) => {
           `Photo size must be less or equal to 5MB. Your photo size is ${fileSize}`
         );
       } else {
-        input.onChange(imageFile);
-        onImageChange(imageFile);
+        input.onChange(JSON.stringify(imageFile));
+        onImageChange(JSON.stringify(imageFile));
       }
     }
   } else {

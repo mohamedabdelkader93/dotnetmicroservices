@@ -17,7 +17,7 @@ const ProductsView = () => {
   const getProductsList = async () => {
     await axios.get(`https://localhost:7000/api/product`)
       .then(response => {
-        if(response.data.result){
+        if(response && response.data && response.data.result){
         setProductsList(response.data.result);
         }
       })
@@ -28,9 +28,12 @@ const ProductsView = () => {
 
   return (
     <div className="container mb-3">
-      <h4 className="my-3">Dashboard</h4>
+      {/* <h4 className="my-3">Dashboard</h4> */}
       <div>
-        <h5>Products</h5>
+        <h5>Products <Link
+          to={`/admin/products/create`}
+          className="btn btn-primary mt-3"
+        >Create</Link></h5>
         <table className="table table-striped table-bordered">
         <thead>
           <tr>
