@@ -5,6 +5,8 @@ using Platraw.Services.AuthAPI.Service;
 using Platraw.Services.AuthAPI.Service.IService;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Platraw.Services.AuthAPI.RabbmitMQSender;
+using Mango.Services.AuthAPI.RabbmitMQSender;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +21,9 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>().AddEntityFrameworkS
 builder.Services.AddControllers();
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IMessageBus, MessageBus>();
+//builder.Services.AddScoped<IMessageBus, MessageBus>();
+builder.Services.AddScoped<IRabbmitMQAuthMessageSender, RabbmitMQAuthMessageSender>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

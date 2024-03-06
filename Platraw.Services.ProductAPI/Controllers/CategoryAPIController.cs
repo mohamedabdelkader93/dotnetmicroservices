@@ -126,7 +126,7 @@ namespace Platraw.Services.CategoryAPI.Controllers
                     }
 
                     string fileName = category.CategoryId + Path.GetExtension(CategoryDto.Image.FileName);
-                    string filePath = @"wwwroot\ProductImages\" + fileName;
+                    string filePath = @"wwwroot\CategoryImages\" + fileName;
                     var filePathDirectory = Path.Combine(Directory.GetCurrentDirectory(), filePath);
                     using (var fileStream = new FileStream(filePathDirectory, FileMode.Create))
                     {

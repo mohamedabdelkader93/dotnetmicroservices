@@ -3,6 +3,7 @@ using Platraw.Services.AuthAPI.Models.Dto;
 using Platraw.Services.AuthAPI.Service.IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Platraw.Services.AuthAPI.RabbmitMQSender;
 
 namespace Platraw.Services.AuthAPI.Controllers
 {
@@ -11,10 +12,11 @@ namespace Platraw.Services.AuthAPI.Controllers
     public class AuthAPIController : ControllerBase
     {
         private readonly IAuthService _authService;
-        private readonly IMessageBus _messageBus;
+        //private readonly IMessageBus _messageBus;
+        private readonly IRabbmitMQAuthMessageSender _messageBus;
         private readonly IConfiguration _configuration;
         protected ResponseDto _response;
-        public AuthAPIController(IAuthService authService,IMessageBus messageBus, IConfiguration configuration)
+        public AuthAPIController(IAuthService authService,IRabbmitMQAuthMessageSender messageBus, IConfiguration configuration)
         {
             _authService = authService;
             _configuration = configuration;
@@ -35,8 +37,9 @@ namespace Platraw.Services.AuthAPI.Controllers
                 _response.Message= errorMessage;
                 return BadRequest(_response);
             }
-            await _messageBus.PublishMessage(model.Email, _configuration.GetValue<string>("TopicAndQueueNames:RegisterUserQueue"));
-                return Ok(_response);
+            //await _messageBus.PublishMessage(model.Email, _configuration.GetValue<string>("TopicAndQueueNames:RegisterUserQueue"));
+            _messageBus.SendMessage(model.Email, _configuration.GetValue<string>("TopicAndQueueNames:RegisterUserQueue"));
+            return Ok(_response);
         }
 
         [HttpPost("login")]

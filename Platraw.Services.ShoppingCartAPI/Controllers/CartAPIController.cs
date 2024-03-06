@@ -3,6 +3,7 @@ using Platraw.MessageBus;
 using Platraw.Services.ShoppingCartAPI.Data;
 using Platraw.Services.ShoppingCartAPI.Models;
 using Platraw.Services.ShoppingCartAPI.Models.Dto;
+using Platraw.Services.ShoppingCartAPI.RabbmitMQSender;
 using Platraw.Services.ShoppingCartAPI.Service.IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,9 +22,12 @@ namespace Platraw.Services.ShoppingCartAPI.Controllers
         private IProductService _productService;
         private ICouponService _couponService;
         private IConfiguration _configuration;
-        private readonly IMessageBus _messageBus;
+        //private readonly IMessageBus _messageBus;
+        private readonly IRabbmitMQCartMessageSender _messageBus;
         public CartAPIController(AppDbContext db,
-            IMapper mapper, IProductService productService, ICouponService couponService,IMessageBus messageBus, IConfiguration configuration)
+            //IMapper mapper, IProductService productService, ICouponService couponService,IMessageBus messageBus, IConfiguration configuration)
+            IMapper mapper, IProductService productService, ICouponService couponService,
+            IRabbmitMQCartMessageSender messageBus, IConfiguration configuration)
         {
             _db = db;
             _messageBus = messageBus;
@@ -99,7 +103,8 @@ namespace Platraw.Services.ShoppingCartAPI.Controllers
         {
             try
             {
-                await _messageBus.PublishMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue"));
+                //await _messageBus.PublishMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue"));
+                _messageBus.SendMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue"));
                 _response.Result = true;
             }
             catch (Exception ex)

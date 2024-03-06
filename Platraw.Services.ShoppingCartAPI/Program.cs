@@ -3,6 +3,7 @@ using Platraw.MessageBus;
 using Platraw.Services.ShoppingCartAPI;
 using Platraw.Services.ShoppingCartAPI.Data;
 using Platraw.Services.ShoppingCartAPI.Extensions;
+using Platraw.Services.ShoppingCartAPI.RabbmitMQSender;
 using Platraw.Services.ShoppingCartAPI.Service;
 using Platraw.Services.ShoppingCartAPI.Service.IService;
 using Platraw.Services.ShoppingCartAPI.Utility;
@@ -27,7 +28,8 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<BackendApiAuthenticationHttpClientHandler>();
 builder.Services.AddScoped<ICouponService, CouponService>();
-builder.Services.AddScoped<IMessageBus, MessageBus>();
+//builder.Services.AddScoped<IMessageBus, MessageBus>();
+builder.Services.AddScoped<IRabbmitMQCartMessageSender, RabbmitMQCartMessageSender>();
 builder.Services.AddHttpClient("Product", u => u.BaseAddress =
 new Uri(builder.Configuration["ServiceUrls:ProductAPI"])).AddHttpMessageHandler<BackendApiAuthenticationHttpClientHandler>();
 builder.Services.AddHttpClient("Coupon", u => u.BaseAddress =

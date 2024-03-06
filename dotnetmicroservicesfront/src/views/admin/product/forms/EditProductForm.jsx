@@ -109,7 +109,7 @@ const EditProductForm = (props) => {
             required={true}
           />
         </div>
-        <div className="col-md-12">
+        {/* <div className="col-md-12">
           <Field
             name="ImageUrl"
             type="text"
@@ -119,8 +119,8 @@ const EditProductForm = (props) => {
             validate={[required]}
             required={true}
           />
-        </div>
-        <div className="col-md-12">
+        </div> */}
+        {/* <div className="col-md-12">
           <Field
             name="ImageLocalPath"
             type="text"
@@ -130,7 +130,7 @@ const EditProductForm = (props) => {
             validate={[required]}
             required={true}
           />
-        </div>
+        </div> */}
         <div className="col-md-12">
           <Field
             name="ProductId"
@@ -184,8 +184,8 @@ const mapStateToProps = (state) => {
       Description: pro?.description,
       Price: pro?.price,
       CategoryId: pro?.categoryId,
-      ImageUrl: pro?.imageUrl,
-      ImageLocalPath: pro?.imageLocalPath,
+      // ImageUrl: pro?.imageUrl,
+      // ImageLocalPath: pro?.imageLocalPath,
       ProductId: pro?.productId,
       Image: pro?.Image
       // Name: productDetails.name,
